@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: rmr4xireu-go-gitops
+  description: This is GitOps manifest for rmr4xireu-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=rmr4xireu-go
+    backstage.io/kubernetes-id: rmr4xireu-go 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: rmr4xireu-go
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:rmr4xireu-go

@@ -1,0 +1,6 @@
+apiVersion: "pipelinesascode.tekton.dev/v1alpha1"
+kind: Repository
+metadata:
+  name: rmr4xireu-go-gitops-repository
+spec:
+  url: https://github.com/rhtap-rhdh-qe/rmr4xireu-go-gitops
